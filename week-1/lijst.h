@@ -325,7 +325,7 @@ int Lijst<T>::geefAantal() const{
 template<class T>
 Lijst<T>* Lijst<T>::zoek(const T& sleutel){
     Lijst* pl=this;
-    while (*pl && pl->get()->sleutel !=sleutel)
+    while (*pl && pl->get()->sleutel != sleutel)
         pl=&(pl->get()->volgend);
     return pl;
 }
