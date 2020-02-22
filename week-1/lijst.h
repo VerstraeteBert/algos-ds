@@ -53,6 +53,7 @@ public:
     Lijst(Lijst<T>&& pl) noexcept;
 
     private: void copy(const Lijst<T>&);
+//    private: void copyRec(const Lijstknoop<T>* ptr);
 
     //duplicaten zijn toegelaten.
     public: void voegToe(const T&);
@@ -136,11 +137,29 @@ Lijst<T>::Lijst(Lijst<T>&& pl) noexcept {
     this->swap(pl);
 }
 
+/**
+ Trivial recursive implementation
+ O(N) runtime; O(N) memory
+
 template <class T>
 void Lijst<T>::copy(const Lijst<T>& pl) {
-    if (!pl) {
-        this->reset();
-    } else {
+    this->reset();
+    copyRec(pl.get());
+}
+
+template<class T>
+void Lijst<T>::copyRec(const Lijstknoop<T>* ptr) {
+    if (!ptr) return;
+    copyRec(ptr->volgend.get());
+    voegToe(ptr->sleutel);
+}
+*/
+
+// O(N) Runtime, O(1) Memory
+template <class T>
+void Lijst<T>::copy(const Lijst<T>& pl) {
+    this->reset();
+    if (pl) {
         auto curr_cp = pl.get();
         voegToe(curr_cp->sleutel);
         curr_cp = curr_cp->volgend.get();
@@ -387,7 +406,6 @@ void Lijst<T>::teken(const char * bestandsnaam) const{
         uit<<"\""<<knoopteller<<"\" [label=\""<<(*loper)->sleutel<<"\",color=white];\n";
         uit<<"\""<<knoopteller<<"v\" [shape=diamond,label=\"\"];\n";
         uit<<"\""<<knoopteller<<"\" -> \""<<knoopteller<<"v\" [color=white];\n";
-
         uit<<"}\n";
         uit<<"\""<<knoopteller<<"v\" -> \""<<knoopteller+1
            <<"\" [lhead=cluster_"<<knoopteller<<" ltail=cluster_"<<knoopteller+1<<"];\n";
