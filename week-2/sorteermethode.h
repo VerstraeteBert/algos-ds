@@ -63,6 +63,7 @@ void Sorteermethode<T>::meet(int kortste, int langste, std::ostream& os, CsvData
 
         double tijd_random = timer.tijd();
         os << std::setw(FIELD_WIDTH) << tijd_random;
+        os << " correct?: " << data.is_gesorteerd();
 
         data.vul_range();
 
@@ -72,7 +73,7 @@ void Sorteermethode<T>::meet(int kortste, int langste, std::ostream& os, CsvData
 
         double tijd_gesorteerd = timer.tijd();
         os << std::setw(FIELD_WIDTH) << tijd_gesorteerd;
-
+        os << " correct?: " << data.is_gesorteerd();
         data.vul_omgekeerd();
 
         timer.start();
@@ -81,6 +82,7 @@ void Sorteermethode<T>::meet(int kortste, int langste, std::ostream& os, CsvData
 
         double tijd_omgekeerd_gesorteerd = timer.tijd();
         os << std::setw(FIELD_WIDTH) << tijd_omgekeerd_gesorteerd;
+        os << " correct?: " << data.is_gesorteerd();
 
         csv.voeg_data_toe(std::vector<double>{
                 static_cast<double>(aantal_elementen), tijd_random, tijd_gesorteerd, tijd_omgekeerd_gesorteerd});

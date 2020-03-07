@@ -10,7 +10,6 @@
 
 using namespace std;
 
-
 template <class T>
 void merge_sort(vector<T>& vec, int start, int end, int hw_threads);
 template <class T>
