@@ -5,6 +5,7 @@
 #include "mergesort.h"
 #include "shellsort.h"
 #include "stlsort.h"
+#include "./parallelmerge.h"
 
 #include <array>
 #include <cassert>
@@ -15,16 +16,18 @@
 template <class T>
 void measure_sorts(const std::string& csv_filename)
 {
-    constexpr int ondergrens = 10;
-    constexpr int bovengrens = 100'000;
+    constexpr int ondergrens = 10'000;
+    constexpr int bovengrens = 100'0000;
+
 
     CsvData csv_results{csv_filename, '.', ','};
 
-    std::array<std::pair<std::string, std::unique_ptr<Sorteermethode<T>>>, 4> sorters = {
+    std::array<std::pair<std::string, std::unique_ptr<Sorteermethode<T>>>, 5> sorters = {
             std::make_pair("STL sort", std::make_unique<STLSort<T>>()),
             std::make_pair("Insertion sort", std::make_unique<InsertionSort<T>>()),
             std::make_pair("Shell sort", std::make_unique<ShellSort<T>>()),
-            std::make_pair("Merge sort", std::make_unique<MergeSort<T>>())
+            std::make_pair("Merge sort", std::make_unique<MergeSort<T>>()),
+            std::make_pair("Parallel Merge Sort", std::make_unique<ParallelMerge<T>>())
     };
 
     for (const auto& sorter : sorters)

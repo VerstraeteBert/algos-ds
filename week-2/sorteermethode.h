@@ -18,7 +18,7 @@ class Sorteermethode{
 /// \fn operator() sorteert de vector gegeven door het argument
         virtual void operator()(vector<T> & v) const = 0;
 
-        virtual ~Sorteermethode() = 0;
+        virtual ~Sorteermethode() {};
 
 /// \fn meet(int kortste, int langste, ostream& os) schrijft naar os een overzicht (met de nodige ornamenten)
 /// met de snelheid van de opgegeven sorteermethode *this. Er wordt 1 lijn uitgedrukt voor elke mogelijke
@@ -63,7 +63,6 @@ void Sorteermethode<T>::meet(int kortste, int langste, std::ostream& os, CsvData
 
         double tijd_random = timer.tijd();
         os << std::setw(FIELD_WIDTH) << tijd_random;
-        os << "correct? " << data.is_gesorteerd();
 
         data.vul_range();
 
@@ -73,7 +72,6 @@ void Sorteermethode<T>::meet(int kortste, int langste, std::ostream& os, CsvData
 
         double tijd_gesorteerd = timer.tijd();
         os << std::setw(FIELD_WIDTH) << tijd_gesorteerd;
-        os << "correct? " << data.is_gesorteerd();
 
         data.vul_omgekeerd();
 
