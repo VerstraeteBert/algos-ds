@@ -46,6 +46,10 @@ void merge_sort(vector<T>& vec, int start, int end, int hw_threads)  {
 template <class T>
 void merge(vector<T>& vec, int start, int mid, int end) {
     int l = start; int r = mid + 1; int curr = 0;
+    // al gesorteerd
+    if (vec[mid] <= vec[r]) {
+        return;
+    }
     auto temp = vector<T>(end - start + 1);
     while (l <= mid && r <= end) {
         if (vec[l] <= vec[r]) {

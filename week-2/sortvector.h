@@ -104,8 +104,7 @@ void Sortvector<T>::draai_om() {
 
 template<class T>
 void Sortvector<T>::vul_omgekeerd() {
-    vul_range();
-    reverse(this->begin(), this->end());
+    iota(this->rbegin(), this->rend(), 0);
 }
 
 template<class T>

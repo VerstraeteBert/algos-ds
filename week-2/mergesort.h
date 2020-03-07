@@ -22,6 +22,10 @@ class MergeSort : public Sorteermethode<T>  {
 
     void merge(vector<T>& vec, int start, int mid, int end) const {
         int l = start; int r = mid + 1; int curr = 0;
+        // al gesorteerd
+        if (vec[mid] <= vec[r]) {
+            return;
+        }
         auto temp = vector<T>(end - start + 1);
         while (l <= mid && r <= end) {
             if (vec[l] <= vec[r]) {
