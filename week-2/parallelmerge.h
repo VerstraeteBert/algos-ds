@@ -68,14 +68,8 @@ void merge(vector<T>& vec, int start, int mid, int end) {
         l++;
     }
 
-    while (r <= end) {
-        temp[curr] = move(vec[r]);
-        curr++;
-        r++;
-    }
-
-    for (int i = 0; i <= temp.size(); i++) {
-        vec[i + start] = move(temp[i]);
+    for (int i = 0; i < curr; i++) {
+        vec[start++] = move(temp[i]);
     }
 }
 

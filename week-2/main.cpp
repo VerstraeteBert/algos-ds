@@ -27,7 +27,7 @@ void measure_sorts(const std::string& csv_filename)
 //            std::make_pair("Insertion sort", std::make_unique<InsertionSort<T>>()),
             std::make_pair("Shell Sort", std::make_unique<ShellSort<T>>()),
             std::make_pair("Merge Sort", std::make_unique<MergeSort<T>>()),
-            std::make_pair("Parallel Merge Sort", std::make_unique<ParallelMerge<T>>())
+            std::make_pair("Parallel Merge Sort", std::make_unique<ParallelMerge<T>>()),
     };
 
     for (const auto& sorter : sorters)
