@@ -22,9 +22,9 @@ void measure_sorts(const std::string& csv_filename)
 
     CsvData csv_results{csv_filename, '.', ','};
 
-    std::array<std::pair<std::string, std::unique_ptr<Sorteermethode<T>>>, 5> sorters = {
+    std::array<std::pair<std::string, std::unique_ptr<Sorteermethode<T>>>, 4> sorters = {
             std::make_pair("STL sort", std::make_unique<STLSort<T>>()),
-            std::make_pair("Insertion sort", std::make_unique<InsertionSort<T>>()),
+//            std::make_pair("Insertion sort", std::make_unique<InsertionSort<T>>()),
             std::make_pair("Shell Sort", std::make_unique<ShellSort<T>>()),
             std::make_pair("Merge Sort", std::make_unique<MergeSort<T>>()),
             std::make_pair("Parallel Merge Sort", std::make_unique<ParallelMerge<T>>())

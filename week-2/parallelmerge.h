@@ -11,7 +11,7 @@
 using namespace std;
 
 template <class T>
-void merge_sort(vector<T>& vec, int start, int end, int hw_threads);
+void merge_sort(vector<T>& vec, int start, int end, int thread_pool);
 template <class T>
 void merge(vector<T>& vec, int start, int mid, int end);
 
@@ -26,13 +26,13 @@ class ParallelMerge : public Sorteermethode<T> {
 };
 
 template <class T>
-void merge_sort(vector<T>& vec, int start, int end, int hw_threads)  {
+void merge_sort(vector<T>& vec, int start, int end, int thread_pool)  {
     if (start < end) {
         int middle = (start + end) / 2;
 
-        if (hw_threads >= 2) {
-            auto fn = std::async(launch::async, [&] { merge_sort(vec, start, middle, hw_threads - 2); });
-            merge_sort(vec, middle + 1, end, hw_threads - 2);
+        if (thread_pool >= 2) {
+            auto fn = async(launch::async, [&] { merge_sort(vec, start, middle, thread_pool - 2); });
+            merge_sort(vec, middle + 1, end, thread_pool - 2);
             fn.wait();
         } else {
             merge_sort(vec, start, middle, 0);
