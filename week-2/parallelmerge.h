@@ -16,7 +16,6 @@ template <class T>
 void merge(vector<T>& vec, int start, int mid, int end);
 
 /** \class ParallelMerge
- * Nog niet 100% werkend :-(
 */
 template <class T>
 class ParallelMerge : public Sorteermethode<T> {
