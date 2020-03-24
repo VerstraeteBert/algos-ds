@@ -10,10 +10,14 @@
 
 using namespace std;
 
+const int THRESHOLD = 32;
+
 template <class T>
 void merge_sort(vector<T>& vec, int start, int end, int thread_pool);
 template <class T>
 void merge(vector<T>& vec, int start, int mid, int end);
+template <class T>
+void insertion_sort(vector<T>& v, int start, int end);
 
 /** \class ParallelMerge
 */
@@ -25,8 +29,21 @@ class ParallelMerge : public Sorteermethode<T> {
 };
 
 template <class T>
+void insertion_sort(vector<T>& v, int start, int end) {
+    for (int i = start + 1; i <= end; i++) {
+        auto el = move(v[i]);
+        int j = i - 1;
+        while (j >= start && v[j] > el) {
+            v[j + 1] = move(v[j]);
+            j--;
+        }
+        v[j + 1] = move(el);
+    }
+}
+
+template <class T>
 void merge_sort(vector<T>& vec, int start, int end, int thread_pool)  {
-    if (start < end) {
+    if (end - start > THRESHOLD) {
         int middle = (start + end) / 2;
 
         if (thread_pool >= 2) {
@@ -39,6 +56,8 @@ void merge_sort(vector<T>& vec, int start, int end, int thread_pool)  {
         }
 
         merge(vec, start, middle, end);
+    } else {
+        insertion_sort(vec, start, end);
     }
 }
 

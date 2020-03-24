@@ -8,9 +8,10 @@
 template <class T>
 class InsertionSort : public Sorteermethode<T> {
     void operator()(vector<T> & v) const {
-        for (int i = 1; i < v.size(); i++) {
-            int j = i - 1;
+        int i;
+        for (i = 1; i < v.size(); i++) {
             auto el = move(v[i]);
+            int j = i - 1;
             while (j >= 0 && v[j] > el) {
                 v[j + 1] = move(v[j]);
                 j--;
@@ -21,4 +22,3 @@ class InsertionSort : public Sorteermethode<T> {
 };
 
 #endif
-
