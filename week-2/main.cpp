@@ -1,6 +1,6 @@
 #include "util/csv.h"
 #include "util/intstring.h"
-#include "util/stlsort.h"
+#include "sorts/stlsort.h"
 #include "sorts/insertionsort.h"
 #include "sorts/mergesort.h"
 #include "sorts/shellsort.h"

@@ -1,7 +1,7 @@
 #ifndef STLSORT_H
 #define STLSORT_H
 
-#include "../sorts/sorteermethode.h"
+#include "sorteermethode.h"
 #include <algorithm>
 
 /** \class STLSort

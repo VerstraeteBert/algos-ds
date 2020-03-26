@@ -191,7 +191,7 @@ bool Lijst<T>::iterator::operator!=(const Lijst::iterator &rhs) {
 }
 
 template<class T>
-const typename Lijst<T>::iterator &Lijst<T>::iterator::operator++() {
+const typename Lijst<T>::iterator& Lijst<T>::iterator::operator++() {
     itr = itr->volgend.get();
     return *this;
 }
