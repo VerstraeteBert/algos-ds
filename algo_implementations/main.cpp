@@ -8,6 +8,8 @@
 #include "sorts/selectionsort.h"
 #include "sorts/heapsort.h"
 #include "sorts/quicksort.h"
+#include "sorts/countsort.h"
+#include "sorts/binaryquicksort.h"
 
 #include <array>
 #include <iostream>
@@ -27,10 +29,12 @@ void measure_sorts(const std::string& csv_filename)
             std::make_pair("STL sort", std::make_unique<STLSort<T>>()),
 //            std::make_pair("Insertion sort", std::make_unique<InsertionSort<T>>()),
 //            std::make_pair("Selection Sort", std::make_unique<SelectionSort<T>>()),
-            std::make_pair("Shell Sort", std::make_unique<ShellSort<T>>()),
-//            std::make_pair("Quick Sort", std::make_unique<QuickSort<T>>()),
-            std::make_pair("Heap Sort", std::make_unique<HeapSort<T>>()),
-            std::make_pair("Merge Sort", std::make_unique<MergeSort<T>>()),
+//            std::make_pair("Shell Sort", std::make_unique<ShellSort<T>>()),
+            std::make_pair("Quick Sort", std::make_unique<QuickSort<T>>()),
+            std::make_pair("Counting Sort", std::make_unique<CountSort<T>()),
+            std::make_pair("Binary QuickSort", std::make_unique<BinaryQuicksort<T>()),
+//            std::make_pair("Heap Sort", std::make_unique<HeapSort<T>>()),
+//            std::make_pair("Merge Sort", std::make_unique<MergeSort<T>>()),
             std::make_pair("Parallel Merge Sort", std::make_unique<ParallelMerge<T>>()),
     };
 
@@ -55,13 +59,13 @@ int main()
 
     measure_sorts<int>("sort_int");
 
-    std::cout << "===== double =====" << std::endl;
-
-    measure_sorts<double>("sort_double");
-
-    std::cout << "===== Intstring =====" << std::endl;
-
-    measure_sorts<Intstring>("sort_intstring");
+//    std::cout << "===== double =====" << std::endl;
+//
+//    measure_sorts<double>("sort_double");
+//
+//    std::cout << "===== Intstring =====" << std::endl;
+//
+//    measure_sorts<Intstring>("sort_intstring");
 
     return 0;
 }

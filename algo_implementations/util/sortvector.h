@@ -119,7 +119,7 @@ template<class T>
 void Sortvector<T>::shuffle() {
     random_device rd;
     mt19937 g(rd());
-    shuffle(this->begin(), this->end(), g);
+    std::shuffle(this->begin(), this->end(), g);
 }
 
 template<class T>

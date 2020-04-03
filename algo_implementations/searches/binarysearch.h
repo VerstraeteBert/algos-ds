@@ -1,6 +1,10 @@
 #ifndef BINARYSEARCH_H
 #define BINARYSEARCH_H
 
+#include <vector>
+
+using namespace std;
+
 template <class T>
 int binary_search(const vector<T>& v, const T& needle) {
     return search_partition(v, 0, v.size() - 1, needle);

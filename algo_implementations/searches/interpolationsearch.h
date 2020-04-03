@@ -4,6 +4,10 @@
 #ifndef INTERPOLATIONSEARCH_H
 #define INTERPOLATIONSEARCH_H
 
+#include <vector>
+
+using namespace std;
+
 /**
  * Can we do better than binary search on uniformly distributed datasets? Hell yeah!
  * Interpolation search works like we would search a phonebook;

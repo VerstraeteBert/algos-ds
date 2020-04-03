@@ -41,16 +41,16 @@ void Sorteermethode<T>::meet(int kortste, int langste, std::ostream& os, CsvData
 {
     constexpr int FIELD_WIDTH = 20;
     Chrono timer;
-
-    os << std::setw(FIELD_WIDTH) << "lengte" << std::setw(FIELD_WIDTH) << "random" << std::setw(FIELD_WIDTH)
-       << "gesorteerd" << std::setw(FIELD_WIDTH) << "omgekeerd" << std::endl
-       << std::endl;
+//
+//    os << std::setw(FIELD_WIDTH) << "lengte" << std::setw(FIELD_WIDTH) << "random" << std::setw(FIELD_WIDTH)
+//       << "gesorteerd" << std::setw(FIELD_WIDTH) << "omgekeerd" << std::endl
+//       << std::endl;
 
     int aantal_elementen = kortste;
     while (aantal_elementen < langste)
     {
 
-        os << std::setw(FIELD_WIDTH) << aantal_elementen;
+//        os << std::setw(FIELD_WIDTH) << aantal_elementen;
 		
 
         Sortvector<T> data(aantal_elementen);
@@ -62,26 +62,26 @@ void Sorteermethode<T>::meet(int kortste, int langste, std::ostream& os, CsvData
         timer.stop();
 
         double tijd_random = timer.tijd();
-        os << std::setw(FIELD_WIDTH) << tijd_random;
+//        os << std::setw(FIELD_WIDTH) << tijd_random;
 //        os << " correct?: " << data.is_gesorteerd();
 
         data.vul_range();
 
         timer.start();
-        (*this)(data);
+//        (*this)(data);
         timer.stop();
 
         double tijd_gesorteerd = timer.tijd();
-        os << std::setw(FIELD_WIDTH) << tijd_gesorteerd;
+//        os << std::setw(FIELD_WIDTH) << tijd_gesorteerd;
 //        os << " correct?: " << data.is_gesorteerd();
         data.vul_omgekeerd();
 
         timer.start();
-        (*this)(data);
+//        (*this)(data);
         timer.stop();
 
         double tijd_omgekeerd_gesorteerd = timer.tijd();
-        os << std::setw(FIELD_WIDTH) << tijd_omgekeerd_gesorteerd;
+//        os << std::setw(FIELD_WIDTH) << tijd_omgekeerd_gesorteerd;
 //        os << " correct?: " << data.is_gesorteerd();
 
         csv.voeg_data_toe(std::vector<double>{

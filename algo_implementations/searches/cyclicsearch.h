@@ -1,6 +1,10 @@
 #ifndef CYCLICSEARCH_H
 #define CYCLICSEARCH_H
 
+#include <vector>
+
+using namespace std;
+
 /**
  * An element in a sorted array can be found in O(log n) time via binary search.
  * But suppose we rotate an ascending order sorted array at some pivot unknown to you beforehand.

@@ -2,6 +2,9 @@
 #define INFINITESEARCH_H
 
 #include "./binarysearch.h"
+#include <vector>
+
+using namespace std;
 
 template <class T>
 /**
