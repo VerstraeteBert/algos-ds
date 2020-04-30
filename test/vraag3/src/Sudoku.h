@@ -58,7 +58,7 @@ Sudoku::Sudoku(const string& filename){
 // -> no duplicate numbers in each dimensions (row, column, subgrid)
 //      -> validated with the presence table
 bool Sudoku::isSolved() {
-    int row_map[9] = {};
+    int row_map[3] = {};
     int col_map[9] = {};
     int subgrid_map[9] = {};
 
@@ -69,9 +69,10 @@ bool Sudoku::isSolved() {
             if (num <= 0 || num > 9) return false;
 
             // duplicated number present in dimension? -> not solved
-            if ((row_map[row] >> num) & 1) return false;
+            int row_num_offset = num + 10 * (row % 3);
+            if ((row_map[row / 3] >> row_num_offset) & 1) return false;
             // update dimension presence table -> set num'th bit
-            row_map[row] |= (1 << num);
+            row_map[row / 3] |= (1 << row_num_offset);
 
             if ((col_map[col] >> num) & 1) return false;
             col_map[col] |= (1 << num);

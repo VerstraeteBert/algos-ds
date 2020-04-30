@@ -1,14 +1,9 @@
-//
-// Created by Bert Verstraete on 01/04/2020.
-//
-
 #ifndef SUDOKUSOLVERNAIVE_H
 #define SUDOKUSOLVERNAIVE_H
 
 #include <stdexcept>
 
 using namespace std;
-
 
 /**
  * Given a canditate number, it check every the adjacent rows, columns and 3x3 subgrids of the candidate position

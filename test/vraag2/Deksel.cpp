@@ -20,4 +20,3 @@ int Deksel::getUUID() const {
 int Deksel::getDiameter() const {
     return this->diameter;
 }
-
