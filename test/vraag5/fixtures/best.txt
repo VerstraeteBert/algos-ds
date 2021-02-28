@@ -1,0 +1,21 @@
+10
+9
+Question 1
+Question 2
+Question 3
+Question 4
+Question 5
+Question 6
+Question 7
+Question 8
+Question 9
+a	y	y	y	n	n	n	n	n	n
+b	y	y	n	n	n	n	n	n	n
+c	y	n	y	y	n	n	n	n	n
+d	y	n	y	n	n	n	n	n	n
+e	y	n	n	n	n	n	n	n	n
+f	n	y	y	n	n	n	n	n	n
+g	n	y	n	n	n	n	n	n	n
+h	n	n	y	y	n	n	n	n	n
+i	n	n	y	n	n	n	n	n	n
+j	n	n	n	n	n	n	n	n	n

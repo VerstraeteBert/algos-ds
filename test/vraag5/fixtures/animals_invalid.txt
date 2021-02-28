@@ -1,0 +1,18 @@
+10
+6
+Does this animal have hair?
+Does this animal have feathers?
+Does this animal lay eggs?
+Does this animal produce milk?
+Can this animal fly?
+Does this animal live in the water?
+aardvark y n n y n n
+antelope y n n y n n 
+bass n n y n n y 
+bear y n n y n n 
+boar y n n y n n 
+buffalo y n n y n n
+calf y n n y n n 
+carp n n y n n y 
+catfish n n y n n y
+cavy y n n y n n

@@ -1,0 +1,79 @@
+55
+22
+Does this animal have hair?
+Does this animal have feathers?
+Does this animal lay eggs?
+Does this animal produce milk?
+Can this animal fly?
+Does this animal live in the water?
+Is this animal a predator?
+Does this animal have teeth?
+Does this animal have a backbone?
+Does this animal breath air?
+Is this animal venomous?
+Does this animal have fins?
+Does this animal walk on four legs?
+Does this animal have a tail?
+Is this animal domesticated?
+Is this animal larger than a house cat?
+Is this animal a mammal?
+Is this animal a bird?
+Is this animal a reptile?
+Is this animal a fish?
+Is this animal an amphibian?
+Is this animal an insect?
+antelope y n n y n n n y y y n n y y n y y n n n n n
+bass n n y n n y y y y n n y n y n n n n n y n n
+bear y n n y n n y y y y n n y n n y y n n n n n
+calf y n n y n n n y y y n n y y y y y n n n n n
+carp n n y n n y n y y n n y n y y n n n n y n n
+cavy y n n y n n n y y y n n y n y n y n n n n n
+cheetah y n n y n n y y y y n n y y n y y n n n n n
+chicken n y y n y n n n y y n n n y y n n y n n n n
+clam n n y n n n y n n n n n n n n n n n n n n n
+crab n n y n n y y n n n n n y n n n n n n n n n
+crayfish n n y n n y y n n n n n n n n n n n n n n n
+crow n y y n y n y n y y n n n y n n n y n n n n
+dolphin n n n y n y y y y y n y n y n y y n n n n n
+duck n y y n y y n n y y n n n y n n n y n n n n
+flamingo n y y n y n n n y y n n n y n y n y n n n n
+flea n n y n n n n n n y n n n n n n n n n n n y
+frog n n y n n y y y y y y n y n n n n n n n y n
+fruitbat y n n y y n n y y y n n n y n n y n n n n n
+gnat n n y n y n n n n y n n n n n n n n n n n y
+gorilla y n n y n n n y y y n n n n n y y n n n n n
+gull n y y n y y y n y y n n n y n n n y n n n n
+hare y n n y n n n y y y n n y y n n y n n n n n
+honeybee y n y n y n n n n y y n n n y n n n n n n y
+housefly y n y n y n n n n y n n n n n n n n n n n y
+kiwi n y y n n n y n y y n n n y n n n y n n n n
+ladybird n n y n y n y n n y n n n n n n n n n n n y
+lark n y y n y n n n y y n n n y n n n y n n n n
+mink y n n y n y y y y y n n y y n y y n n n n n
+mole y n n y n n y y y y n n y y n n y n n n n n
+newt n n y n n y y y y y n n y y n n n n n n y n
+octopus n n y n n y y n n n n n n n n y n n n n n n
+ostrich n y y n n n n n y y n n n y n y n y n n n n
+penguin n y y n n y y n y y n n n y n y n y n n n n
+pitviper n n y n n n y y y y y n n y n n n n y n n n
+platypus y n y y n y y n y y n n y y n y y n n n n n
+pussycat y n n y n n y y y y n n y y y y y n n n n n
+rhea n y y n n n y n y y n n n y n y n y n n n n
+scorpion n n n n n n y n n y y n n y n n n n n n n n
+seahorse n n y n n y n y y n n y n y n n n n n y n n
+seal y n n y n y y y y y n y n n n y y n n n n n
+sealion y n n y n y y y y y n y n y n y y n n n n n
+seasnake n n n n n y y y y n y n n y n n n n y n n n
+seawasp n n y n n y y n n n y n n n n n n n n n n n
+slowworm n n y n n n y y y y n n n y n n n n y n n n
+slug n n y n n n n n n y n n n n n n n n n n n n
+squirrel y n n y n n n y y y n n n y n n y n n n n n
+stingray n n y n n y y y y n y y n y n y n n n y n n
+swan n y y n y y n n y y n n n y n y n y n n n n
+toad n n y n n y n y y y n n y n n n n n n n y n
+tortoise n n y n n n n n y y n n y y n y n n y n n n
+tuatara n n y n n n y y y y n n y y n n n n y n n n
+tuna n n y n n y y y y n n y n y n y n n n y n n
+vulture n y y n y n y n y y n n n y n y n y n n n n
+wallaby y n n y n n n y y y n n n y n y y n n n n n
+wasp y n y n y n n n n y y n n n n n n n n n n y

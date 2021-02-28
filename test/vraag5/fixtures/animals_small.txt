@@ -1,0 +1,9 @@
+4
+3
+Is this animal a mammal?
+Is this animal a carnivore?
+Does this animal stand on four legs?
+bear   y y y
+owl    n y n
+deer   y n y
+pigeon n n n 

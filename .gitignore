@@ -148,3 +148,5 @@ _deps
 
 .idea/
 theorie/
+
+.vscode/
